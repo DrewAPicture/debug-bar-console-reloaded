@@ -52,8 +52,8 @@ class Integration
 		wp_enqueue_style( 'debug-bar-console-reloaded-cm', plugins_url( "{$basePath}/lib/codemirror.css", __FILE__ ), array(), '2.22' );
 		wp_enqueue_script( 'debug-bar-console-reloaded-cm', plugins_url( "{$basePath}/debug-bar-codemirror.js", __FILE__ ), array(), '2.22' );
 
-		wp_enqueue_style( 'debug-bar-console-reloaded', plugins_url( "assets/css/debug-bar-console-reloaded$suffix.css", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
-		wp_enqueue_script( 'debug-bar-console-reloaded', plugins_url( "assets/js/debug-bar-console-reloaded$suffix.js", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
+		wp_enqueue_style( 'debug-bar-console-reloaded', plugins_url( "../assets/css/debug-bar-console-reloaded$suffix.css", __FILE__ ), array( 'debug-bar', 'debug-bar-console-reloaded-cm' ), '20241011' );
+		wp_enqueue_script( 'debug-bar-console-reloaded', plugins_url( "../assets/js/debug-bar-console-reloaded$suffix.js", __FILE__ ), array( 'debug-bar', 'debug-bar-console-reloaded-cm' ), '20241011' );
 
 	}
 }
