@@ -1,19 +1,5 @@
 {
-    "packages": [
-        {
-            "name": "drewapicture/html",
-            "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DrewAPicture/html.git",
-                "reference": "modern"
-            },
-            "type": "library",
-            "installation-source": "source",
-            "install-path": "../drewapicture/html"
-        }
-    ],
+    "packages": [],
     "dev": true,
     "dev-package-names": []
 }

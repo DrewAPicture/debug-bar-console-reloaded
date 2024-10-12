@@ -8,22 +8,5 @@
             "WW\\DebugBarConsoleReloaded\\": "src/"
         }
     },
-	"repositories": [
-		{
-			"type": "package",
-			"package": {
-				"name": "drewapicture/html",
-				"type": "library",
-				"version": "1.0.0",
-				"source": {
-					"url": "https://github.com/DrewAPicture/html.git",
-					"type": "git",
-					"reference": "modern"
-				}
-			}
-		}
-	],
-    "require": {
-		"drewapicture/html": "1.0.0"
-	}
+    "require": {}
 }

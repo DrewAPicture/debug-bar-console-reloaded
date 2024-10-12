@@ -4,19 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd3cac1ed771cbbe933b0187e2de51fe",
-    "packages": [
-        {
-            "name": "drewapicture/html",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DrewAPicture/html.git",
-                "reference": "modern"
-            },
-            "type": "library"
-        }
-    ],
+    "content-hash": "edbb14e45519feb0f9b7346d4819f2b6",
+    "packages": [],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
