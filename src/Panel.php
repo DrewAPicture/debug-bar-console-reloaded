@@ -1,6 +1,30 @@
 <?php
+/**
+ * Console panel registration class
+ */
 
-class Debug_Bar_Console extends Debug_Bar_Panel {
+namespace WW\DebugBarConsoleReloaded;
+
+use \Debug_Bar_Panel;
+
+/**
+ * Registers the panel for Debug Bar.
+ *
+ * @since 1.0
+ */
+class Panel extends Debug_Bar_Panel
+{
+	public function addPanel()
+	{
+		add_filter('debug_bar_panels', function($panels) {
+			$panels[] =
+		});
+	}
+
+	/**
+	 *
+	 * @return void
+	 */
 	function init() {
 		$this->title( 'Console' );
 		add_action( 'wp_ajax_debug_bar_console', array( &$this, 'ajax' ) );
@@ -22,7 +46,7 @@ class Debug_Bar_Console extends Debug_Bar_Panel {
 		<form id="debug-bar-console" class="debug-bar-console-mode-<?php echo esc_attr( $mode ); ?>">
 		<input id="debug-bar-console-iframe-css" type="hidden"
 			value="<?php echo plugins_url( 'css/iframe.dev.css', __FILE__ ); ?>" />
-		<?php wp_nonce_field( 'debug_bar_console', '_wpnonce_debug_bar_console' ); ?>
+		<?php wp_nonce_field( 'Debug_Bar_Console_Reloaded', '_wpnonce_debug_bar_console' ); ?>
 		<div id="debug-bar-console-wrap">
 			<ul class="debug-bar-console-tabs">
 				<?php foreach ( $modes as $slug => $title ):
@@ -63,7 +87,7 @@ class Debug_Bar_Console extends Debug_Bar_Panel {
 	function ajax() {
 		global $wpdb;
 
-		if ( false === check_ajax_referer( 'debug_bar_console', 'nonce', false ) )
+		if ( false === check_ajax_referer( 'Debug_Bar_Console_Reloaded', 'nonce', false ) )
 			die();
 
 		if ( ! is_super_admin() || ! isset( $_POST['mode'] ) )
