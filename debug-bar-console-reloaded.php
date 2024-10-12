@@ -1,11 +1,11 @@
 <?php
-/*
- Plugin Name: Debug Bar Console
- Plugin URI: http://wordpress.org/extend/plugins/debug-bar-console/
- Description: Adds a PHP/SQL console to the debug bar. Requires the debug bar plugin.
- Author: koopersmith
- Version: 0.4-alpha
- Author URI: http://darylkoop.com/
+/**
+ * Plugin Name: Debug Bar Console Reloaded
+ * Plugin URI: http://wordpress.org/extend/plugins/debug-bar-console-reloaded/
+ * Description: Adds a PHP/SQL console to the debug bar. Requires the debug bar plugin.
+ * Author: Drew Jaynes
+ * Author URI: https://werdswords.com
+ * Version: 1.0
  */
 
 add_filter('debug_bar_panels', 'debug_bar_console_panel');
