@@ -21,6 +21,9 @@ use WW\DebugBarConsoleReloaded\Integration;
  */
 class DebugBarConsoleReloaded
 {
+	const VERSION = '1.0.0';
+	const FILE = __FILE__;
+
 	/**
 	 * Initializes the plugin.
 	 *
@@ -36,4 +39,4 @@ class DebugBarConsoleReloaded
 	}
 }
 
-(new DebugBarConsoleReloaded())->init();
+add_action('init', fn() => (new DebugBarConsoleReloaded())->init());
