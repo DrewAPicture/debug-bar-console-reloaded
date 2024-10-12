@@ -17,6 +17,7 @@ namespace WW\DebugBarConsoleReloaded {
 
 	use DebugBarConsoleReloaded;
 	use Debug_Bar_Console_Reloaded_Panel;
+	use WW\DebugBarConsoleReloaded\Helpers\AssetsHelper;
 
 	/**
 	 * Sets up the integration with Debug Bar.
@@ -61,44 +62,31 @@ namespace WW\DebugBarConsoleReloaded {
 		 */
 		public function enqueueScripts()
 		{
-			$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '.dev' : '';
 			$basePath = "src/assets/codemirror";
 
 			// Codemirror
 			wp_enqueue_style(
 				'debug-bar-console-reloaded-cm',
-				plugins_url(
-					"{$basePath}/lib/codemirror.css",
-					DebugBarConsoleReloaded::FILE
-				),
+				AssetsHelper::getStyleUrl("{$basePath}/lib/codemirror.css", false),
 				[],
 				'2.22'
 			);
 			wp_enqueue_script(
 				'debug-bar-console-reloaded-cm',
-				plugins_url(
-					"{$basePath}/debug-bar-codemirror.js",
-					DebugBarConsoleReloaded::FILE
-				),
+				AssetsHelper::getScriptUrl("{$basePath}/debug-bar-codemirror.js", false),
 				[],
 				'2.22'
 			);
 
 			wp_enqueue_style(
 				'debug-bar-console-reloaded',
-				plugins_url(
-					"assets/css/debug-bar-console-reloaded$suffix.css",
-					DebugBarConsoleReloaded::FILE
-				),
+				AssetsHelper::getStyleUrl('assets/css/debug-bar-console-reloaded.css'),
 				['debug-bar', 'debug-bar-console-reloaded-cm'],
 				'20241011'
 			);
 			wp_enqueue_script(
 				'debug-bar-console-reloaded',
-				plugins_url(
-					"assets/js/debug-bar-console-reloaded$suffix.js",
-					DebugBarConsoleReloaded::FILE
-				),
+				AssetsHelper::getScriptUrl('assets/js/debug-bar-console-reloaded.js'),
 				['debug-bar', 'debug-bar-console-reloaded-cm'],
 				'20241011'
 			);
