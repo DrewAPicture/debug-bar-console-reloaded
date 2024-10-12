@@ -72,7 +72,7 @@ class AssetsHelper
 				return $url;
 		}
 
-		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '.dev' : '';
+		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 
 		if (true === $allowDev && $suffix && false === strpos($assetPath, "{$suffix}{$extension}", $offset)) {
 			$assetPath = str_replace($extension, "{$suffix}{$extension}", $assetPath);
