@@ -84,12 +84,13 @@ class PanelAjax
 	 * @param string $query Optional. Query. Default empty string.
 	 * @return void
 	 */
-	protected function printMysqlTable( $data, $query = '')
+	protected function printMysqlTable($data, $query = '')
 	{
-		if ( empty($data) )
-			return;
+		$keys = array_keys($data[0] ?? []);
 
-		$keys = array_keys( $data[0] );
+		if (empty($keys)) {
+			return;
+		}
 		?>
 		<table class="mysql" cellpadding="0">
 			<thead>
