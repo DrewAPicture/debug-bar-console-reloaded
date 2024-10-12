@@ -46,13 +46,14 @@ class Integration
 	public function enqueueScripts()
 	{
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '.dev' : '';
+		$basePath = "src/assets/codemirror";
 
 		// Codemirror
-		wp_enqueue_style( 'debug-bar-console-reloaded-cm', plugins_url( "codemirror/lib/codemirror.css", __FILE__ ), array(), '2.22' );
-		wp_enqueue_script( 'debug-bar-console-reloaded-cm', plugins_url( "codemirror/debug-bar-codemirror.js", __FILE__ ), array(), '2.22' );
+		wp_enqueue_style( 'debug-bar-console-reloaded-cm', plugins_url( "{$basePath}/lib/codemirror.css", __FILE__ ), array(), '2.22' );
+		wp_enqueue_script( 'debug-bar-console-reloaded-cm', plugins_url( "{$basePath}/debug-bar-codemirror.js", __FILE__ ), array(), '2.22' );
 
-		wp_enqueue_style( 'debug-bar-console-reloaded', plugins_url( "css/debug-bar-console$suffix.css", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
-		wp_enqueue_script( 'debug-bar-console-reloaded', plugins_url( "js/debug-bar-console$suffix.js", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
+		wp_enqueue_style( 'debug-bar-console-reloaded', plugins_url( "assets/css/debug-bar-console-reloaded$suffix.css", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
+		wp_enqueue_script( 'debug-bar-console-reloaded', plugins_url( "assets/js/debug-bar-console-reloaded$suffix.js", __FILE__ ), array( 'debug-bar', 'debug-bar-codemirror' ), '20241011' );
 
 	}
 }
