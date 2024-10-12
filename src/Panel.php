@@ -14,19 +14,13 @@ use \Debug_Bar_Panel;
  */
 class Panel extends Debug_Bar_Panel
 {
-	public function addPanel()
-	{
-		add_filter('debug_bar_panels', function($panels) {
-			$panels[] =
-		});
-	}
-
 	/**
 	 *
 	 * @return void
 	 */
 	function init() {
 		$this->title( 'Console' );
+
 		add_action( 'wp_ajax_debug_bar_console', array( &$this, 'ajax' ) );
 	}
 
