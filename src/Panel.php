@@ -14,29 +14,37 @@ use DebugBarConsoleReloaded;
  */
 class Panel extends \Debug_Bar_Panel
 {
+	/**
+	 * {@inheritDoc}
+	 */
 	function init() {
 		$this->title( 'Console' );
 
-		add_action( 'wp_ajax_debug_bar_console', array( &$this, 'ajax' ) );
+		add_action('wp_ajax_debug_bar_console', [&$this, 'ajaxCallback']);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	function prerender() {
-		$this->set_visible( true );
+		$this->set_visible(true);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	function render() {
 		$modes = array(
-			'php' => __('PHP'),
-			'sql' => __('SQL'),
+			'php' => __('PHP', 'debug-bar-console-reloaded'),
+			'sql' => __('SQL', 'debug-bar-console-reloaded'),
 		);
 
 		$mode = 'php';
 
 		?>
-		<form id="debug-bar-console" class="debug-bar-console-mode-<?php echo esc_attr( $mode ); ?>">
-		<input id="debug-bar-console-iframe-css" type="hidden"
-			value="<?php echo plugins_url( 'assets/css/iframe.dev.css', DebugBarConsoleReloaded::FILE ); ?>" />
-		<?php wp_nonce_field( 'Debug_Bar_Console_Reloaded', '_wpnonce_debug_bar_console' ); ?>
+		<form id="debug-bar-console" class="debug-bar-console-mode-<?php echo esc_attr($mode); ?>">
+		<input id="debug-bar-console-iframe-css" type="hidden" value="<?php echo plugins_url('assets/css/iframe.dev.css', DebugBarConsoleReloaded::FILE); ?>" />
+		<?php wp_nonce_field('Debug_Bar_Console_Reloaded', '_wpnonce_debug_bar_console'); ?>
 		<div id="debug-bar-console-wrap">
 			<ul class="debug-bar-console-tabs">
 				<?php foreach ( $modes as $slug => $title ):
@@ -74,7 +82,14 @@ class Panel extends \Debug_Bar_Panel
 		<?php
 	}
 
-	function ajax() {
+	/**
+	 * Ajax callback for the panel.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	function ajaxCallback() {
 		global $wpdb;
 
 		if ( false === check_ajax_referer( 'Debug_Bar_Console_Reloaded', 'nonce', false ) )
