@@ -20,7 +20,7 @@ namespace {
 	 *
 	 * @since 1.0.0
 	 */
-	class Debug_Bar_Console_Reloaded_Panel extends Panel{}
+	final class Debug_Bar_Console_Reloaded_Panel extends Panel{}
 }
 
 namespace WW\DebugBarConsoleReloaded {
