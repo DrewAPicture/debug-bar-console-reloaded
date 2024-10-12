@@ -1,8 +1,8 @@
-=== Debug Bar Console ===
-Contributors: koopersmith
+=== Debug Bar Console Reloaded ===
+Contributors: drewapicture
 Tags: debug, developer, console
-Tested up to: 3.4
-Stable tag: 0.3
+Tested up to: 6.6
+Stable tag: 1.0
 Requires at least: 3.1
 
 Adds a PHP/MySQL console to the debug bar. Requires the debug bar plugin.
@@ -11,36 +11,18 @@ Adds a PHP/MySQL console to the debug bar. Requires the debug bar plugin.
 
 Adds a PHP/MySQL console to the debug bar. Requires the [Debug Bar plugin](http://wordpress.org/extend/plugins/debug-bar/) (v0.5 or later).
 
+Forked from the defunct (and adored!) [Debug Bar Console](https://wordpress.org/plugins/debug-bar-console/) by [@koopersmith](https://profiles.wordpress.org/koopersmith/).
+
 == Upgrade Notice ==
 
-= 0.3 =
-Added syntax highlighting using the CodeMirror text editor.
-Explicit PHP/SQL modes.
-UI changes to reflect updated debug bar UI.
-
-= 0.2 =
-Improvements to MySQL detection and display.
-Bug fixes.
-
-= 0.1 =
-Initial Release
+= 1.0 =
+- Initial Release
 
 == Changelog ==
 
-= 0.3 =
-Added syntax highlighting using the CodeMirror text editor.
-Explicit PHP/SQL modes.
-UI changes to reflect updated debug bar UI.
-
-= 0.2 =
-Improvements to MySQL detection and display.
-Bug fixes.
-
-= 0.1 =
-Initial Release
+= 1.0 =
+- Initial release
 
 == Installation ==
 
 Install the [Debug Bar plugin](http://wordpress.org/extend/plugins/debug-bar/).
-
-Use automatic installer.
