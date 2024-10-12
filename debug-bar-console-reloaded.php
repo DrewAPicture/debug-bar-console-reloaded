@@ -12,6 +12,12 @@
  * Domain Path: /languages/
  */
 
+/**
+ * Copyright (c) 2024, Drew Jaynes
+ * Copyright (c) 2011-2024, Daryl Koopersmith
+ * http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ */
+
 use WW\DebugBarConsoleReloaded\Integration;
 
 /**

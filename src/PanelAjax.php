@@ -4,7 +4,11 @@
  *
  * @since 1.0.0
  *
- * @package DebugBarConsoleReloaded/Panel
+ * @package DebugBarConsoleReloaded
+ *
+ * @copyright Copyright (c) 2024, Drew Jaynes
+ * @copyright Copyright (c) 2011-2024, Daryl Koopersmith
+ * @license  http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
 namespace WW\DebugBarConsoleReloaded;
