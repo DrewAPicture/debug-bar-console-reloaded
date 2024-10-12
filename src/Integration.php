@@ -2,7 +2,7 @@
 
 namespace WW\DebugBarConsoleReloaded;
 
-use \Debug_Bar_Panel;
+use Debug_Bar_Panel;
 
 /**
  * Sets up the integration with Debug Bar.
@@ -18,7 +18,7 @@ class Integration
 	 *
 	 * @return void
 	 */
-	public function start()
+	public function start() : void
 	{
 		add_filter('debug_bar_panels', [$this, 'registerPanel']);
 		add_action('debug_bar_enqueue_scripts', [$this, 'enqueueScripts']);
@@ -46,7 +46,7 @@ class Integration
 	public function enqueueScripts()
 	{
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '.dev' : '';
-		$basePath = "src/assets/codemirror";
+		$basePath = "assets/codemirror";
 
 		// Codemirror
 		wp_enqueue_style( 'debug-bar-console-reloaded-cm', plugins_url( "{$basePath}/lib/codemirror.css", __FILE__ ), array(), '2.22' );

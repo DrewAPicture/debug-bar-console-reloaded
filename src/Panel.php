@@ -39,7 +39,7 @@ class Panel extends Debug_Bar_Panel
 		?>
 		<form id="debug-bar-console" class="debug-bar-console-mode-<?php echo esc_attr( $mode ); ?>">
 		<input id="debug-bar-console-iframe-css" type="hidden"
-			value="<?php echo plugins_url( 'assets/css/iframe.dev.css', __FILE__ ); ?>" />
+			value="<?php echo plugins_url( '../assets/css/iframe.dev.css', __FILE__ ); ?>" />
 		<?php wp_nonce_field( 'Debug_Bar_Console_Reloaded', '_wpnonce_debug_bar_console' ); ?>
 		<div id="debug-bar-console-wrap">
 			<ul class="debug-bar-console-tabs">
