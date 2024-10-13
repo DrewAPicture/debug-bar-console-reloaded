@@ -12,6 +12,7 @@
 namespace WW\DebugBarConsoleReloaded;
 
 use DebugBarConsoleReloaded;
+use WW\DebugBarConsoleReloaded\Helpers\AssetsHelper;
 
 /**
  * Registers the panel for Debug Bar.
@@ -46,8 +47,7 @@ class Panel extends \Debug_Bar_Panel
 		);
 
 		$mode = 'php';
-		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '.dev' : '';
-		$iframeCss = plugins_url("assets/css/iframe{$suffix}.css", DebugBarConsoleReloaded::FILE);
+		$iframeCss = AssetsHelper::getStyleUrl('assets/css/iframe.css');
 		?>
 		<form id="debug-bar-console" class="debug-bar-console-mode-<?php echo esc_attr($mode); ?>">
 		<input id="debug-bar-console-iframe-css" type="hidden" value="<?php echo esc_attr($iframeCss); ?>" />
