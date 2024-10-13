@@ -3,6 +3,12 @@
     "description": "Adds a PHP/MySQL console panel to Debug Bar.",
     "type": "wordpress-plugin",
     "license": "GPLv2",
+	"authors": [
+		{
+			"name": "Drew Jaynes",
+			"homepage": "https://werdswords.com/"
+		}
+	],
     "autoload": {
         "psr-4": {
             "WW\\DebugBarConsoleReloaded\\": "src/"
