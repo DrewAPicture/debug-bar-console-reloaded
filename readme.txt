@@ -6,7 +6,7 @@ Stable tag: 1.0.0
 Requires at least: 3.1
 License: GPLv2
 
-Adds a PHP/MySQL console to the debug bar. Requires the debug bar plugin.
+Adds a PHP/SQL console to the debug bar. Requires the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin.
 
 == Description ==
 
