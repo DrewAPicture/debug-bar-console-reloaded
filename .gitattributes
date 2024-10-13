@@ -1,8 +1,8 @@
 # Directories
-/.github
+/.github export-ignore
 
 # Files
-/.gitattributes
-/.gitignore
-composer.lock
-README.md
+/.gitattributes export-ignore
+/.gitignore export-ignore
+composer.lock export-ignore
+README.md export-ignore
