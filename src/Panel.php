@@ -68,7 +68,7 @@ class Panel extends \Debug_Bar_Panel
 			</ul>
 			<div id="debug-bar-console-submit">
 				<span><?php esc_html_e('Shift + Enter', 'debug-bar-console-reloaded'); ?></span>
-				<a href="#"><?php esc_html_e('Run', 'debug-bar-console-reloaded'); ?></a>
+				<a href="#"><?php echo esc_html_x('Run', 'Run the program', 'debug-bar-console-reloaded'); ?></a>
 			</div>
 			<div class="debug-bar-console-panel debug-bar-console-on-php">
 				<label for="debug-bar-console-input-php" class="screen-reader-text"><?php esc_html_e('Enter PHP code to execute.', 'debug-bar-console-reloaded'); ?></label>
@@ -81,8 +81,8 @@ class Panel extends \Debug_Bar_Panel
 		</div>
 		<div id="debug-bar-console-output">
 			<ul class="debug-bar-console-tabs">
-				<li class="debug-bar-console-tab debug-bar-console-tab-active" data-output-mode="formatted"><?php esc_html_e('Formatted', 'debug-bar-console-reloaded'); ?></li>
-				<li class="debug-bar-console-tab" data-output-mode="raw"><?php esc_html_e('Raw', 'debug-bar-console-reloaded'); ?></li>
+				<li class="debug-bar-console-tab debug-bar-console-tab-active" data-output-mode="formatted"><?php echo esc_html_x('Formatted', 'Formatted output', 'debug-bar-console-reloaded'); ?></li>
+				<li class="debug-bar-console-tab" data-output-mode="raw"><?php echo esc_html_x('Raw', 'Raw output', 'debug-bar-console-reloaded'); ?></li>
 			</ul>
 			<div class="debug-bar-console-panel">
 				<iframe title="<?php esc_attr_e('Output', 'debug-bar-console-reloaded'); ?>"></iframe>
