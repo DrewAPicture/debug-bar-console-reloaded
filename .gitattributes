@@ -1,0 +1,7 @@
+# Directories
+/.github
+
+# Files
+/.gitattributes
+/.gitignore
+/composer.lock
