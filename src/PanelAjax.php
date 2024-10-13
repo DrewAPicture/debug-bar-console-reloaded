@@ -29,7 +29,7 @@ class PanelAjax
 	 */
 	public function init()
 	{
-		add_action('wp_ajax_debug_bar_console', [&$this, 'printOutput']);
+		add_action('wp_ajax_debug_bar_console', [$this, 'printOutput']);
 	}
 
 	/**
@@ -51,8 +51,8 @@ class PanelAjax
 			die();
 		}
 
-		$data = stripslashes($_REQUEST['data'] ?? '');
-		$mode = $_REQUEST['mode'] ?? 'php';
+		$data = wp_unslash($_REQUEST['data'] ?? '');
+		$mode = strval(wp_unslash($_REQUEST['mode'] ?? 'php'));
 
 
 		if ( 'php' === $mode ) {
@@ -85,7 +85,7 @@ class PanelAjax
 	 * Prints the MySQL table.
 	 *
 	 * @param array<mixed> $data Found rows.
-	 * @param string $query Optional. Query. Default empty string.
+	 * @param string $query Optional. Query text. Default empty string.
 	 * @return void
 	 */
 	protected function printMysqlTable($data, $query = '')
@@ -99,7 +99,7 @@ class PanelAjax
 		<table class="mysql" cellpadding="0">
 			<thead>
 			<tr class="query">
-				<td colspan="<?php echo esc_attr(count($keys)); ?>"><?php echo $query; ?></td>
+				<td colspan="<?php echo esc_attr(count($keys)); ?>"><?php echo esc_sql($query); ?></td>
 			</tr>
 			<tr>
 				<?php foreach ($keys as $key): ?>

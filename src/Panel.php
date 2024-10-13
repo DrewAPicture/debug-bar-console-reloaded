@@ -67,7 +67,7 @@ class Panel extends \Debug_Bar_Panel
 				<?php endforeach; ?>
 			</ul>
 			<div id="debug-bar-console-submit">
-				<span><?php _e('Shift + Enter', 'debug-bar-console-reloaded'); ?></span>
+				<span><?php esc_html_e('Shift + Enter', 'debug-bar-console-reloaded'); ?></span>
 				<a href="#"><?php esc_html_e('Run', 'debug-bar-console-reloaded'); ?></a>
 			</div>
 			<div class="debug-bar-console-panel debug-bar-console-on-php">

@@ -85,7 +85,8 @@ namespace WW\DebugBarConsoleReloaded {
 				'debug-bar-console-reloaded-cm',
 				AssetsHelper::getScriptUrl("{$basePath}/debug-bar-codemirror.js", false),
 				[],
-				'2.22'
+				'2.22',
+				['in_footer' => false]
 			);
 
 			wp_enqueue_style(
@@ -98,7 +99,8 @@ namespace WW\DebugBarConsoleReloaded {
 				'debug-bar-console-reloaded',
 				AssetsHelper::getScriptUrl('assets/js/debug-bar-console-reloaded.js'),
 				['debug-bar', 'debug-bar-console-reloaded-cm'],
-				'20241011'
+				'20241011',
+				['in_footer' => false]
 			);
 		}
 	}

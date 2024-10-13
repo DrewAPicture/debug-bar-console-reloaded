@@ -2,8 +2,9 @@
 Contributors: drewapicture
 Tags: debug, developer, console
 Tested up to: 6.6
-Stable tag: 1.0
+Stable tag: 1.0.0
 Requires at least: 3.1
+License: GPLv2
 
 Adds a PHP/MySQL console to the debug bar. Requires the debug bar plugin.
 
