@@ -4,5 +4,5 @@
 # Files
 /.gitattributes
 /.gitignore
-/composer.lock
-/README.md
+composer.lock
+README.md
