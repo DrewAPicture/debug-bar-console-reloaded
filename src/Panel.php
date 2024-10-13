@@ -41,10 +41,10 @@ class Panel extends \Debug_Bar_Panel
 	 * {@inheritDoc}
 	 */
 	function render() {
-		$modes = array(
+		$modes = [
 			'php' => __('PHP', 'debug-bar-console-reloaded'),
 			'sql' => __('SQL', 'debug-bar-console-reloaded'),
-		);
+		];
 
 		$mode = 'php';
 		$iframeCss = AssetsHelper::getStyleUrl('assets/css/iframe.css');

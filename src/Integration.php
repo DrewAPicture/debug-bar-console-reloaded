@@ -93,13 +93,13 @@ namespace WW\DebugBarConsoleReloaded {
 				'debug-bar-console-reloaded',
 				AssetsHelper::getStyleUrl('assets/css/debug-bar-console-reloaded.css'),
 				['debug-bar', 'debug-bar-console-reloaded-cm'],
-				'20241011'
+				\DebugBarConsoleReloaded::VERSION
 			);
 			wp_enqueue_script(
 				'debug-bar-console-reloaded',
 				AssetsHelper::getScriptUrl('assets/js/debug-bar-console-reloaded.js'),
 				['debug-bar', 'debug-bar-console-reloaded-cm'],
-				'20241011',
+				\DebugBarConsoleReloaded::VERSION,
 				['in_footer' => false]
 			);
 		}
