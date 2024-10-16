@@ -51,9 +51,9 @@ class PanelAjax
 			die();
 		}
 
+		// phpcs:ignore (It's literally PHP code)
 		$data = wp_unslash($_REQUEST['data'] ?? '');
-		$mode = strval(wp_unslash($_REQUEST['mode'] ?? 'php'));
-
+		$mode = sanitize_key(wp_unslash($_REQUEST['mode'] ?? 'php'));
 
 		if ( 'php' === $mode ) {
 			// Trim the data
@@ -75,6 +75,7 @@ class PanelAjax
 			$data = explode(";\n", $data);
 			foreach ($data as $query ) {
 				$query = str_replace('$wpdb->', $wpdb->prefix, $query);
+				// phpcs:ignore (No placeholders to prepare)
 				$this->printMysqlTable($wpdb->get_results($query, ARRAY_A), $query);
 			}
 			die();
